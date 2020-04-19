@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.title{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container{
+    height: 500px;
+    width: 800px;
+    border: 10px solid black;
+    position: relative;
+    margin: auto;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.image-container .transition-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    transition: all 3s ease;
+}
+.image-container .transition-image:hover {
+    opacity: 0;
+}
