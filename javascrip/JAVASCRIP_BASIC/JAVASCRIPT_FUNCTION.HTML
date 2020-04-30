@@ -1,0 +1,52 @@
+<HTml>
+
+<HEAD>
+    <!-- Thực hiện hàm không cần truyền tham số -->
+
+    <!-- <SCript language="Javascript" type="text/javascript">
+        function Hello() {
+            alert("hello here");
+        }
+    </SCript> -->
+
+    <!-- Thực hiện hàm truyền tham số -->
+
+    <!-- <script language="javascript" type="text/javascript">
+        function hello(name, age) {
+            document.write(name + " is " + age);
+        }
+    </script> -->
+
+    <!-- Thực hiện hàm trả về giá trị  -->
+
+    <script language="javascript" type="text/javascript">
+        function contactname(first, last) {
+            var full;
+            full = first + " " + last;
+            return full;
+        }
+
+        function secondFunction() {
+            var Result;
+            Result = contactname("Zill", "Ben");
+            document.write(Result);
+        }
+    </script>
+
+</HEAD>
+
+<body>
+
+    <!-- <input type="button" onclick="hello('Ben','25')" value="Click"> -->
+
+    <p>Click the following button to call the function</p>
+
+    <form>
+        <input type="button" onclick="secondFunction()" value="Call Function">
+        <form>
+
+            <p>Use different parameters inside the function and then try...</p>
+
+</body>
+
+</HTml>

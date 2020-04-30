@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- sử dụng hôp thoại thông báo -->
+    <!-- sử dựng hôp thoại xác nhận  -->
+    <script>
+        function Warn() {
+
+            // alert("Xin chao ban!");
+            // document.write("Cảm ơn bạn đã nhấn ok");
+
+            // var getconfirm = confirm("Thông bao cho bạn !");
+            // if (getconfirm == true) {
+            //     document.write("Bạn đã chọn ok")
+            // } else {
+            //     document.write("Ban đa chọn cannel")
+            // }
+
+            var getprompt = prompt("Enter myname :", "your name here");
+            document.write("You name entered: " + getprompt);
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>Click the following button to see the result: </p>
+
+    <form>
+        <input type="button" value="Click Me" onclick="Warn();" />
+    </form>
+</body>
+
+</html>
