@@ -1,0 +1,154 @@
+<!-- JAVASCRIPT LÀ MỘT NGÔN NGỮ HƯỚNG ĐỐI TƯỢNG.  -->
+
+<!-- NÓ CÓ ĐỦ 4 TÍNH CHẤT CỦA MỘT NGÔN NGỮ HƯỚNG ĐỐI TƯỢNG -->
+
+<!-- +TÍNH ĐỐNG GÓI: KHẢ NĂNG LƯU GIỮ THÔNG TIN LIÊN QUAN, LÀ DỮ LIỆU HOẶC CÁC PHƯƠNG THỨC, CŨNG VỚI NHAU TRONG MỘT ĐÓI TƯỢNG
+
+    +TÍNH TỔ HỢP : KHẢ NĂNG LƯU GIỮ MỘT ĐỐI TƯỢNG BÊN TRONG MỘT ĐỐI TƯỢNG KHÁC.
+
+
+    +TÍNH KẾ THỪA : KHẢ NĂNG CỦA MỘT LỚP DỰA TRÊN MỘT LỚP KHÁC ĐÔI VỚI MỘT SỐ THUỘC TÍNH VÀ PHƯƠNG THƯƠNG CỦA NÓ
+
+    +TÍNH ĐA HÌNH : KHẢ NĂNG ĐỂ VIẾT MỘT HÀM HOẶC PHƯƠNG THỨC MÀ LÀM VIỆC TRONG NHIỀU CÁC ĐA DẠNG KHÁC NHAU. -->
+
+<!-- CÁC THUỘC TÍNH CỦA MỘT ĐỐI TƯỢNG -->
+<!-- THUỘC TÍNH CỦA MỘT ĐỐI TƯỢNG CÓ THÊ LÀ BẤT KỲ LOẠI NÀO TRONG 3 KIỂU DỮ LIỆU GỐC, HOẶC TRONG CÁC KIÊU DỰ LIỆU TRỪU TƯỢNG ABSTRACT. -->
+<!-- CÚ PHÁP ĐỂ THÊM MỘT THUỘC TÍNH TỚ MỘT ĐỐI TƯỢNG LÀ  -->
+<!-- OBJECTNAME.OBJECTPROPERTY = PROPERTYVALUE; -->
+
+<!-- TẠO RA MỘT OBJECT -->
+
+<!-- <html>
+
+<head>
+    <title>User-defined objects</title>
+
+    <script type="text/JAVASCRIPT">
+        var book = new Object(); book.subject = "Per1"; book.author = "Mohtashim";
+    </script>
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        document.write("Book name is : " + book.subject + "<br>");
+        document.write("Book author is : " + book.author + "<br>");
+    </script>
+</body>
+
+</html> -->
+
+<!-- TẠO RA MỘT ĐỐI TƯỢNG ĐƯỢC NGƯỜI DÙNG ĐỊNH NGHĨA -->
+
+<!-- <html>
+
+<head>
+
+    <title>User-defined objects</title>
+
+    <script type="text/javascript">
+        function book(title, author) {
+            this.title = title;
+            this.author = author;
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        var myBook = new book("Perl", "Mohtashim");
+        document.write("Book title is : " + myBook.title + "<br>");
+        document.write("Book author is : " + myBook.author + "<br>");
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- Nó chỉ cách thêm một hàm cùng với một đối tượng. -->
+
+<!-- <html>
+
+<head>
+    <title>User-defined objects</title>
+
+    <script type="text/javascript">
+        function addPrice(amount) {
+            this.price = amount;
+        }
+
+        function Book(title, author) {
+            this.title = title;
+            this.author = author;
+            this.addPrice = addPrice;
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var myBook = new Book("Perl", "Mohtashim");
+
+        myBook.addPrice(100);
+
+        document.write("Book title is : " + myBook.title + "<br>");
+        document.write("Book author is : " + myBook.author + "<br>");
+        document.write("Book price is : " + myBook.price + "<br>");
+    </script>
+</body>
+
+</html> -->
+<!-- SỬ DỤNG KEYWORD WITH -->
+<!-- <html>
+   <head>
+   <title>User-defined objects</title>
+   
+      <script type="text/javascript">
+         // Define a function which will work as a method
+         function addPrice(amount){
+            with(this){
+               price = amount;
+            }
+         }
+         
+         function book(title, author){
+            this.title = title;
+            this.author  = author;
+            this.price = 0;
+            this.addPrice = addPrice; // Assign that method as property.
+         }
+      </script>
+      
+   </head>
+   <body>
+   
+      <script type="text/javascript">
+         var myBook = new book("Perl", "Mohtashim");
+         myBook.addPrice(100);
+         
+         document.write("Book title is : " + myBook.title + "<br>");
+         document.write("Book author is : " + myBook.author + "<br>");
+         document.write("Book price is : " + myBook.price + "<br>");
+      </script>
+      
+   </body>
+</html> -->
+<html>
+
+<head>
+    <script type="text/javascript">
+        function Fruit(_color, _name) {
+            this.color = _color;
+            this.name = _name;
+
+            this.show = function() {
+                console.log(this.name);
+            }
+        }
+    </script>
+</head>
+
+</html>
