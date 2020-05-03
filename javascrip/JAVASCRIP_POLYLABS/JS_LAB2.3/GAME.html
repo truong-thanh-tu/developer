@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DoanSo() {
+            var NgayNhien = 10 + Math.random() * 5;
+
+            var LamTron = Math.round(NgayNhien);
+
+            var nhap = prompt("Nhap vao mot so :");
+
+            if (isNaN(nhap)) {
+                alert("Ban Phai Nhap Mot So: ");
+                nhap = prompt("Nhap vao mot so :");
+            }
+            while (true) {
+                if (nhap == LamTron) {
+                    alert("Ban da nhap dung ");
+                } else {
+                    alert("Ban da nhap sai ");
+                    nhap = prompt("Nhap vao mot so :");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        DoanSo();
+    </script>
+</body>
+
+</html>

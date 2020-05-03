@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Ham them gio hanghang
+        function them(btn) {
+            //Khai bao dong
+            var row = btn.parentElement.parentElement.cloneNode(true);
+
+
+            document.getElementById("giohang").appendChild(row)
+                //Hien thi chu xoa
+            var btnXoa = row.getElementsByTagName('button')[0];
+            btnXoa.innerText = "Xoa";
+            btnXoa.setAttribute('onclick', 'xoa(this)');
+            TinhTien();
+        }
+        // Ham xoa gio hang
+        function xoa(btn) {
+            var row = btn.parentElement.parentElement;
+            document.getElementById('giohang').removeChild(row);
+            TinhTien();
+        }
+        //Ham tinh tien 
+        function TinhTien() {
+            var tongTien = 0;
+            var cart = document.getElementById("giohang");
+            var rows = cart.getElementsByTagName("tr");
+            for (var i = 0; i < rows.length; i++) {
+                var cell = rows[i].getElementsByTagName('td');
+                var price = cell[i].innerText;
+                tongTien = tongTien + 1 * Number(price);
+                var numTien = Number(tongTien);
+            }
+            document.getElementById("sum").innerText = numTien;
+        }
+
+
+        // function them(btn) {
+        //     var row = btn.parentElement.parentElement.cloneNode(true);
+
+        //     var btnXoa = row.getElementsByTagName('button')[0];
+        //     btnXoa.innerText = "xoa";
+        //     btnXoa.setAttribute('onclick', 'xoa(this)');
+        //     document.getElementById("giohang").appendChild(row);
+        // }
+
+        // function xoa(btn) {
+        //     var row = btn.parentElement.parentElement;
+
+        //     document.getElementById('giohang').removeChild(row);
+        // }
+    </script>
+</head>
+
+<body>
+    <table border="1" id="Listsp">
+        <tr>
+            <td>IP9</td>
+            <td>2700</td>
+            <td><button onclick="them(this)">Them</button></td>
+        </tr>
+    </table>
+    <h2>Gio hang cua ban</h2>
+    <table border="1" id="giohang">
+
+    </table>
+    <h2>Tong Tien la <label id="sum"></label></h2>
+</body>
+
+</html>

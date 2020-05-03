@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Fibonaci() {
+            var num1 = prompt("Nhap num1 ");
+            var num2 = prompt("Nhap num2 ");
+
+            var so = new Array();
+
+
+            for (var i = 2; i < 10; i++) {
+                so[0] = Number(num1);
+                so[1] = Number(num2);
+
+                so[i] = so[i - 1] + so[i - 2];
+
+                document.write(so[i] + " ");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        Fibonaci();
+    </script>
+</body>
+
+</html>

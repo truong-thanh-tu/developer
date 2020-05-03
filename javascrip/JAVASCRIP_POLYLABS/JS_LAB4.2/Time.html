@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function thoiGian() {
+            var today = new Date();
+            var Gio = today.getHours();
+            var Phut = today.getMinutes();
+            var Giay = today.getSeconds();
+            setTimeout("thoiGian()", 2000);
+            document.getElementById("Time").innerHTML = (Gio + " : " + Phut + " : " + Giay);
+        }
+        thoiGian();
+    </script>
+    <label id="Time" style="background-color: black;padding: 5px; border-radius: 20px; margin-top: 10%; color:#fff;"></label>
+</body>
+
+</html>

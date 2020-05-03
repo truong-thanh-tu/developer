@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hamToanhoc() {
+            var x = prompt("Moi ban nhap mo so ! ");
+
+            if (isNaN(x)) {
+                alert(x + " Khong phai la mot so ")
+                x = prompt("Moi ban nhap lai mot so ");
+            }
+
+            document.write("Tinh can bac 2:  <br>");
+            var a = Math.sqrt(x);
+            document.write("Can bac 2 cua " + x + " la " + a + "<br>");
+
+            document.write("Tinh binh phuong : <br>");
+            var b = Math.pow(x, 2);
+            document.write("Binh phuong cua " + x + " la " + b + "<br>")
+
+            document.write("Lam tron so !<br>");
+            var c = Math.round(x);
+            document.write(" co lam tron tu " + x + "la " + c)
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        hamToanhoc();
+    </script>
+</body>
+
+</html>

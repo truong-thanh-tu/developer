@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function GPTB2(tsa, tsb, tsc) {
+            this.a = tsa;
+            this.b = tsb;
+            this.c = tsc;
+
+            this.tinhDelta = function() {
+                var delta = this.b * this.b - 4 * this.a * this.c;
+                return delta;
+            }
+
+            this.tinhNghiem = function() {
+
+                if (this.tinhDelta() < 0) {
+
+                    alert("Phuong trinh vo nghiem");
+                } else if (this.tinhDelta() == 0) {
+                    alert("Phuong trinh co mot nghiem kep x = " + (-this.b / (2 * this.a)));
+                } else {
+
+                    var x1 = (-this.b + Math.sqrt(this.tinhDelta())) / (2 * this.a);
+                    var x2 = (-this.b - Math.sqrt(this.tinhDelta())) / (2 * this.a);
+
+                    alert("Phuong trinh co hai nghiem phan biet");
+                    alert("x1 = " + x1 + " x2 = " + x2);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        var dt = new GPTB2(2, 5, 3);
+        dt.tinhNghiem();
+    </script>
+</body>
+
+</html>

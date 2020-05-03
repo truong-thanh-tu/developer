@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var wd;
+
+        function mo() {
+            window.open("http://127.0.0.1:5500/JAVASCRIP_POLYLABS/JS_LAB4.3/BOM.html");
+        }
+
+        function dong() {
+            if (window.closed == false) {
+                window.close();
+            }
+        }
+
+        function kiemtra() {
+            if (window.closed == false) {
+                alert("Chua dong");
+            } else {
+                alert("Dong")
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <button id="button1" value="Open" onclick="mo()">Open</button>
+    <button id="button2" value="Close" onclick="dong()">Close</button>
+    <button id="button3" value="Check" onclick="kiemtra()">Check</button>
+</body>
+
+</html>

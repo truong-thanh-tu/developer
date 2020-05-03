@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var index = 0;
+        var arr = [
+            'img/PhamTuan-2.jpg',
+            'img/DinhHieu-1.jpg',
+            'img/QuangHuy-1.jpg',
+            'img/ThanhTung-1.jpg',
+        ];
+
+        function ShowImage() {
+            document.getElementById("show").src = arr[index];
+            index++;
+            if (index == arr.length) {
+                index = 0;
+            };
+            setTimeout("ShowImage()", 112);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <img src="img/PhamTuan-2.jpg" width="500px" id="show" alt="">
+
+    <script language="javascript" type="text/javascript">
+        ShowImage();
+    </script>
+</body>
+
+</html>

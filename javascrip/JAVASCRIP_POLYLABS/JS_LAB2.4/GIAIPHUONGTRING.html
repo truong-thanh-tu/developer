@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function PhuongTrinhBacHai() {
+            alert("Giai phuong trinh bac hai: ax2 + bx + c =0 <br>");
+            alert("Moi ban nhap vao ba he so </br>");
+            var a = prompt("a = ");
+            var b = prompt("b = ");
+            var c = prompt("c = ");
+            var delta = b * b - (4 * a * c);
+
+            if (delta < 0) {
+                document.write("Phuong tring vo nghiem");
+            } else if (delta == 0) {
+                document.write("Phuong tring co nghiem kep x = " + (-b / 2 * a));
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / 2 * a;
+                var x2 = (b + Math.sqrt(delta)) / 2 * a;
+
+                document.write("Phuong tring co hai nghiem <br>");
+                document.write("x1 = " + x1);
+                document.write("x2 = " + x2);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        PhuongTrinhBacHai();
+    </script>
+</body>
+
+</html>
