@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function tinhToan() {
+            //Truy cap vao pro, qty
+            var pro = document.getElementById('pro');
+            var qty = document.getElementById('qty');
+            //Biến dữ liệu ở pro thanh text 
+            var ten = pro.innerText;
+            //Chuyển dữ liệu text vào cho địa chỉ name 
+            document.getElementById('name').innerText = ten;
+            //Tính toán
+            //Lay  don gia
+            var priceU = pro.getAttribute("data-price");
+            var sl = qty.value;
+            var tongTien = sl * priceU;
+            document.getElementById('qtys').innerText = tongTien;
+
+        }
+    </script>
+</head>
+
+<body>
+    <label id="pro" data-price="1950">Iphone X max</label>
+    <input type="number" value="1" id="qty">
+    <button onclick="tinhToan()">OK</button>
+    <hr>
+    <h1>Name : <label id="name">????</label></h1>
+    <h1>Amount: <label id="qtys">?????</label></h1>
+</body>
+
+</html>
