@@ -1,6 +1,6 @@
 var readlineSync = require('readline-sync');
 var fs = require('fs');
-// var student = [];
+var students = [];
 
 
 function showMenu() {
@@ -51,7 +51,7 @@ function showCreatStudent() {
 
 function saveAndExit() {
     var content = JSON.stringify(students);
-    console.log(content);
+
     fs.writeFileSync('./data.json', content, {
         encoding: 'utf8'
     });
